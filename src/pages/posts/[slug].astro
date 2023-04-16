@@ -45,14 +45,4 @@ const startPost = lastPost - SITE.postPerPage;
 const paginatedPosts = sortedPosts.slice(startPost, lastPost);
 ---
 
-{
-  post ? (
-    <PostDetails post={post} />
-  ) : (
-    <Posts
-      posts={paginatedPosts}
-      pageNum={currentPage}
-      totalPages={totalPages.length}
-    />
-  )
-}
+{post ? <PostDetails post={post} /> : null}
